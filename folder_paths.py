@@ -52,10 +52,11 @@ folder_names_and_paths["model_patches"] = ([os.path.join(models_dir, "model_patc
 
 folder_names_and_paths["audio_encoders"] = ([os.path.join(models_dir, "audio_encoders")], supported_pt_extensions)
 
-output_directory = os.path.join(base_path, "output")
-temp_directory = os.path.join(base_path, "temp")
-input_directory = os.path.join(base_path, "input")
-user_directory = os.path.join(base_path, "user")
+# Update output directory
+output_directory = os.path.expandvars("X:\\$TK_PROJECT_NAME\\artists\\$USERNAME\\comfy_ui\\_outputs")
+temp_directory = os.path.expandvars("X:\\$TK_PROJECT_NAME\\artists\\$USERNAME\\comfy_ui\\_temp")
+input_directory = os.path.expandvars("X:\\$TK_PROJECT_NAME\\artists\\$USERNAME\\comfy_ui\\_inputs")
+user_directory = os.path.expandvars("X:\\$TK_PROJECT_NAME\\artists\\$USERNAME\\comfy_ui\\_user")
 
 filename_list_cache: dict[str, tuple[list[str], dict[str, float], float]] = {}
 
